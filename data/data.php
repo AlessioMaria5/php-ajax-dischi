@@ -45,4 +45,6 @@ $database = [
     ]
 ];
 
+echo json_encode($database);
+
 ?>
