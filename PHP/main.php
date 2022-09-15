@@ -8,25 +8,32 @@
 </head>
 <body>
     <div id="main">
+        <form action="index.php" type="GET">
+            <input type="text" name="genre">
+            <button type="submit">Search for Genre</button>
+        </form>
         <div class="songs-wrapper">
+        <ul class='song-card'>
             <?php 
-            echo "<ul class='song-card'>";
+            $myGenre = $_GET['genre'];
+                foreach($database as $data){
 
-            foreach($database as $data){
+                    if($myGenre == $data['genre']){
 
-            echo '<li>'
-                .'<div class="song-wrapper">'
-                .'<img src="'.$data['poster'].'">'
-                .'</div>'
-                .'<h3>' .$data['title']. '</h3>'
-                .'<h4>' .$data['author']. '</h4>'
-                .'<h4>' .$data['year'].'</h4>'
-                .'</li>';
-            }
+                        echo '<li>'
+                        .'<div class="song-wrapper">'
+                        .'<img src="'.$data['poster'].'">'
+                        .'</div>'
+                        .'<h3>' .$data['title']. '</h3>'
+                        .'<h4>' .$data['author']. '</h4>'
+                        .'<h4>' .$data['year'].'</h4>'
+                        .'</li>';
 
-            echo "</ul>";
-
+                    }
+                }
+                
             ?>
+        </ul>
         </div>
     </div>
 </body>
