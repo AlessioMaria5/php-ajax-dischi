@@ -6,7 +6,7 @@ var app = new Vue ({
 
     created: function() {
 
-        axios.get('http://localhost/php-ajax-dischi/data/data.php')
+        axios.get('http://localhost/php-ajax-dischi/vueJS/newData.php')
         .then(response => {
             console.log(response)
             this.myData = response.data
