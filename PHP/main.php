@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="main">
-        <form action="index.php" type="GET">
+        <form class="searchGenre" action="index.php" type="GET">
             <input type="text" name="genre">
             <button type="submit">Search for Genre</button>
         </form>
@@ -42,8 +42,9 @@
                         .'<h4>' .$data['year'].'</h4>'
                         .'</li>';
 
-                    }
+                    } else echo 'X';
                 }
+
                 
             ?>
         </ul>
