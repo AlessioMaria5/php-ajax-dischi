@@ -30,6 +30,19 @@
                         .'</li>';
 
                     }
+
+                    else if($myGenre == ''){
+
+                        echo '<li>'
+                        .'<div class="song-wrapper">'
+                        .'<img src="'.$data['poster'].'">'
+                        .'</div>'
+                        .'<h3>' .$data['title']. '</h3>'
+                        .'<h4>' .$data['author']. '</h4>'
+                        .'<h4>' .$data['year'].'</h4>'
+                        .'</li>';
+
+                    }
                 }
                 
             ?>
